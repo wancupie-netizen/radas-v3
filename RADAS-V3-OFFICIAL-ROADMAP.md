@@ -4,7 +4,7 @@
 **Project:** RADAS V3 — AI Creative Studio  
 **Repository:** `radas-v3`  
 **Status:** Approved working baseline  
-**Version:** 1.0  
+**Version:** 1.1
 **Source baseline:** `Pasted markdown(6).md` — RADAS V3 — AI Creative Studio
 
 ---
@@ -242,7 +242,7 @@ Any proposed change to product scope, architecture, provider strategy, pricing m
 ## PHASE 0 — Project Isolation and Governance
 
 **Phase ID:** `RADAS-V3-00`  
-**Status:** `NOT STARTED`  
+**Status:** `IN PROGRESS`
 **Objective:** Establish RADAS V3 as a clean, isolated project with an auditable baseline.
 
 ### Scope
@@ -1257,6 +1257,12 @@ No heavy product implementation is approved before the audit and cost gates defi
 
 # 14. Change Log
 
+## Version 1.1
+
+- Marked `RADAS-V3-00` as `IN PROGRESS`.
+- Established the approved governance scaffold and audit baseline.
+- Recorded Atlas `main@18ec178052f6f97612813997613d88ce34b02fc5` as the reproducible audit baseline.
+
 ## Version 1.0
 
 - Established the official single source of truth.
@@ -1270,4 +1276,5 @@ No heavy product implementation is approved before the audit and cost gates defi
 
 | Version | Approval | Date | Notes |
 |---|---|---|---|
+| 1.1 | Approved for phase execution | 2026-09-20 | RADAS-V3-00A Governance Scaffold approved by founder. |
 | 1.0 | Approved as official working baseline | — | Created under founder instruction as the single source of truth for RADAS V3. |
