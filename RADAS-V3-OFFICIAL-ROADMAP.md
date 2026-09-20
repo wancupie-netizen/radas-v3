@@ -370,7 +370,7 @@ Prototype and audit work may continue while the licence is unresolved. Commercia
 ## PHASE 2 — Clean Functional Baseline
 
 **Phase ID:** `RADAS-V3-02 / AUDIT-00B`  
-**Status:** `IN PROGRESS`
+**Status:** `COMPLETE`
 **Depends on:** `GATE-1` — approved 2026-09-21
 **Objective:** Run Atlas cleanly and document what genuinely works before redesigning it.
 
@@ -420,6 +420,29 @@ For each flow, record:
 - All core flows have an evidence-backed status.
 - Failures are mapped to specific layers.
 - Atlas behaviour can be compared against future RADAS changes.
+
+### Completion record - `GATE-2`
+
+- Founder approval: `APPROVED - 2026-09-21`.
+- Atlas baseline tested: `AtlasCloudAI/atlas-marketing-studio main@18ec178052f6f97612813997613d88ce34b02fc5`.
+- Local runtime baseline: `PASS WITH DOCUMENTED LIMITATIONS`.
+- Authentication login, authenticated session and logout were verified.
+- Neon / Prisma database baseline was verified.
+- Product upload was verified after Atlas API configuration.
+- Image generation reached Atlas but was blocked by the external provider balance requirement; no paid audit top-up was made.
+- Generation-history persistence was verified.
+- BYOK credit behaviour was runtime-tested; site-credit charge/refund behaviour was source-verified.
+- Vercel Blob reference-image upload was verified.
+- Atlas redeem mode and disabled checkout behaviour were verified.
+- Unconfigured Stripe webhook behaviour was verified.
+- Protected API routes rejected unauthenticated access.
+- Public marketing-studio polling accepted unauthenticated requests and reached Atlas polling logic; carry forward to `AUDIT-00C`.
+- Direct internal URL access through the download route was blocked with `403`; redirect-following remains for deeper SSRF review.
+- Regression suite: `PASS - 11 passed, 0 failed`.
+- Atlas audit repository remained clean at the pinned baseline.
+- Atlas licence state remains `UNRESOLVED`.
+- Reuse boundary remains `ZERO-CODE-REUSE`.
+- No Atlas source was imported into RADAS V3.
 
 ---
 
