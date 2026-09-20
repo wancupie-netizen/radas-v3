@@ -4,7 +4,7 @@
 **Project:** RADAS V3 — AI Creative Studio  
 **Repository:** `radas-v3`  
 **Status:** Approved working baseline  
-**Version:** 1.1
+**Version:** 1.2
 **Source baseline:** `Pasted markdown(6).md` — RADAS V3 — AI Creative Studio
 
 ---
@@ -241,8 +241,8 @@ Any proposed change to product scope, architecture, provider strategy, pricing m
 
 ## PHASE 0 — Project Isolation and Governance
 
-**Phase ID:** `RADAS-V3-00`  
-**Status:** `IN PROGRESS`
+**Phase ID:** `RADAS-V3-00`
+**Status:** `COMPLETE`
 **Objective:** Establish RADAS V3 as a clean, isolated project with an auditable baseline.
 
 ### Scope
@@ -282,9 +282,9 @@ Any proposed change to product scope, architecture, provider strategy, pricing m
 
 ## PHASE 1 — Atlas Repository, Licence and Dependency Audit
 
-**Phase ID:** `RADAS-V3-01 / AUDIT-00A`  
-**Status:** `NOT STARTED`  
-**Depends on:** `GATE-0`  
+**Phase ID:** `RADAS-V3-01 / AUDIT-00A`
+**Status:** `IN PROGRESS`
+**Depends on:** `GATE-0` — approved 2026-09-20
 **Objective:** Determine exactly what Atlas contains, whether it builds, and what may safely be reused.
 
 ### Audit scope
@@ -1223,15 +1223,13 @@ Stop and seek a decision if:
 
 # 12. Immediate Approved Work
 
-The next active work package is:
-
-## `RADAS-V3-00 — Project Isolation and Governance`
-
-Followed by:
+The active work package is:
 
 ## `RADAS-V3-01 / AUDIT-00A — Atlas Repository, Licence and Dependency Audit`
 
-No heavy product implementation is approved before the audit and cost gates defined above.
+`RADAS-V3-00 / GATE-0` was completed and approved on 2026-09-20. Its governance scaffold was merged into `main` at `699ae12f8d6d4976804f674a4b78db9e52f7a1ac`.
+
+No Atlas source import or heavy product implementation is approved during `AUDIT-00A`. Work remains limited to evidence-backed repository, licence and dependency audit activities.
 
 ---
 
@@ -1257,6 +1255,12 @@ No heavy product implementation is approved before the audit and cost gates defi
 
 # 14. Change Log
 
+## Version 1.2
+
+- Recorded founder approval and completion of `RADAS-V3-00 / GATE-0`.
+- Recorded Phase 0 merge commit `699ae12f8d6d4976804f674a4b78db9e52f7a1ac`.
+- Activated `RADAS-V3-01 / AUDIT-00A` for repository, licence and dependency audit only.
+
 ## Version 1.1
 
 - Marked `RADAS-V3-00` as `IN PROGRESS`.
@@ -1276,5 +1280,6 @@ No heavy product implementation is approved before the audit and cost gates defi
 
 | Version | Approval | Date | Notes |
 |---|---|---|---|
+| 1.2 | Approved phase transition | 2026-09-20 | GATE-0 approved by founder; RADAS-V3-01 / AUDIT-00A authorised. |
 | 1.1 | Approved for phase execution | 2026-09-20 | RADAS-V3-00A Governance Scaffold approved by founder. |
 | 1.0 | Approved as official working baseline | — | Created under founder instruction as the single source of truth for RADAS V3. |
