@@ -4,7 +4,7 @@
 **Project:** RADAS V3 — AI Creative Studio  
 **Repository:** `radas-v3`  
 **Status:** Approved working baseline  
-**Version:** 1.2
+**Version:** 1.3
 **Source baseline:** `Pasted markdown(6).md` — RADAS V3 — AI Creative Studio
 
 ---
@@ -283,7 +283,7 @@ Any proposed change to product scope, architecture, provider strategy, pricing m
 ## PHASE 1 — Atlas Repository, Licence and Dependency Audit
 
 **Phase ID:** `RADAS-V3-01 / AUDIT-00A`
-**Status:** `IN PROGRESS`
+**Status:** `COMPLETE`
 **Depends on:** `GATE-0` — approved 2026-09-20
 **Objective:** Determine exactly what Atlas contains, whether it builds, and what may safely be reused.
 
@@ -351,13 +351,27 @@ Every meaningful Atlas module must be classified as:
 
 Prototype and audit work may continue while the licence is unresolved. Commercial launch may not proceed until the required reuse rights are confirmed or Atlas code has been replaced with legally safe alternatives.
 
+### Completion record — `GATE-1`
+
+- Founder approval: `APPROVED - 2026-09-21`.
+- Atlas baseline audited: `AtlasCloudAI/atlas-marketing-studio main@18ec178052f6f97612813997613d88ce34b02fc5`.
+- Licence state: `UNRESOLVED`.
+- Reuse boundary: `ZERO-CODE-REUSE` until canonical licence evidence confirms the required commercial rights.
+- Clean clone of the exact baseline: `PASS`.
+- Dependency installation: completed far enough to run the repository test suite; deprecated dependency warnings were recorded.
+- Test suite: `PASS` — 11 tests passed, 0 failed.
+- Production build on Windows / Node `v22.22.2`: `FAIL` before `next build` because `scripts/generate-prisma-clients.mjs` calls `spawnSync(...\prisma.cmd)` and Node returns `EINVAL`.
+- The Windows failure is documented as a portability/build-tooling finding; it does not establish that Linux or Vercel builds fail.
+- Atlas module classification and initial risk register are complete enough to proceed to functional baseline testing.
+- No Atlas source has been imported into RADAS V3.
+
 ---
 
 ## PHASE 2 — Clean Functional Baseline
 
 **Phase ID:** `RADAS-V3-02 / AUDIT-00B`  
-**Status:** `NOT STARTED`  
-**Depends on:** `GATE-1`  
+**Status:** `IN PROGRESS`
+**Depends on:** `GATE-1` — approved 2026-09-21
 **Objective:** Run Atlas cleanly and document what genuinely works before redesigning it.
 
 ### Functional checks
@@ -1225,11 +1239,11 @@ Stop and seek a decision if:
 
 The active work package is:
 
-## `RADAS-V3-01 / AUDIT-00A — Atlas Repository, Licence and Dependency Audit`
+## `RADAS-V3-02 / AUDIT-00B — Clean Functional Baseline`
 
-`RADAS-V3-00 / GATE-0` was completed and approved on 2026-09-20. Its governance scaffold was merged into `main` at `699ae12f8d6d4976804f674a4b78db9e52f7a1ac`.
+`RADAS-V3-01 / AUDIT-00A` was completed and `GATE-1` was approved by the founder on 2026-09-21.
 
-No Atlas source import or heavy product implementation is approved during `AUDIT-00A`. Work remains limited to evidence-backed repository, licence and dependency audit activities.
+`AUDIT-00B` is authorised for evidence-backed functional baseline work only. The Atlas licence remains `UNRESOLVED`, the `ZERO-CODE-REUSE` boundary remains active, and no RADAS product implementation or Atlas source import is authorised by this phase transition.
 
 ---
 
@@ -1254,6 +1268,14 @@ No Atlas source import or heavy product implementation is approved during `AUDIT
 ---
 
 # 14. Change Log
+
+## Version 1.3
+
+- Recorded founder approval and completion of `RADAS-V3-01 / AUDIT-00A` and `GATE-1` on 2026-09-21.
+- Recorded Atlas licence state as `UNRESOLVED` with a `ZERO-CODE-REUSE` boundary.
+- Recorded clean-clone success, 11/11 passing tests and the Windows production-build failure at `spawnSync(...\prisma.cmd) EINVAL`.
+- Activated `RADAS-V3-02 / AUDIT-00B` for clean functional baseline work.
+- Preserved infrastructure and target-architecture decisions as provisional until the roadmap-authorised architecture phases.
 
 ## Version 1.2
 
@@ -1280,6 +1302,7 @@ No Atlas source import or heavy product implementation is approved during `AUDIT
 
 | Version | Approval | Date | Notes |
 |---|---|---|---|
+| 1.3 | Approved phase transition | 2026-09-21 | GATE-1 approved by founder; AUDIT-00A complete; RADAS-V3-02 / AUDIT-00B authorised. |
 | 1.2 | Approved phase transition | 2026-09-20 | GATE-0 approved by founder; RADAS-V3-01 / AUDIT-00A authorised. |
 | 1.1 | Approved for phase execution | 2026-09-20 | RADAS-V3-00A Governance Scaffold approved by founder. |
 | 1.0 | Approved as official working baseline | — | Created under founder instruction as the single source of truth for RADAS V3. |
