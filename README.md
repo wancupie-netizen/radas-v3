@@ -6,7 +6,7 @@ RADAS V3 is an AI Creative Studio that transforms products and ideas into ready-
 
 ## Current project state
 
-- Active phase: `RADAS-V3-01 / AUDIT-00A - Atlas Repository, Licence and Dependency Audit`
+- Active phase: `RADAS-V3-02 / AUDIT-00B - Clean Functional Baseline`
 - Product implementation: not started
 - Atlas source import: not started
 - Commercial licence clearance: unresolved
