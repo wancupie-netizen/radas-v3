@@ -6,7 +6,7 @@
 |---|---|
 | Phase | `RADAS-V3-02 - Clean Functional Baseline` |
 | Work package | `AUDIT-00B` |
-| Status | `IN PROGRESS` |
+| Status | `COMPLETE - GATE-2 APPROVED` |
 | Starting commit | `f09bac137d1521bad4f5989cb8b3c435c942dce8` |
 | Working branch | `audit/radas-v3-02` |
 | Atlas audit baseline | `AtlasCloudAI/atlas-marketing-studio main@18ec178052f6f97612813997613d88ce34b02fc5` |
@@ -66,6 +66,37 @@
 - Production build on Windows / Node `v22.22.2` failed in `scripts/generate-prisma-clients.mjs` before `next build` because the script directly spawns `prisma.cmd`.
 - The Windows build finding does not establish Linux/Vercel build failure.
 - No Atlas source was imported into RADAS V3.
+## GATE-2 completion record
+
+| Field | Value |
+|---|---|
+| Phase | `RADAS-V3-02 - Clean Functional Baseline` |
+| Atlas baseline | `AtlasCloudAI/atlas-marketing-studio main@18ec178052f6f97612813997613d88ce34b02fc5` |
+| Founder approval | `APPROVED - 2026-09-21` |
+| Gate status | `COMPLETE` |
+| Licence state | `UNRESOLVED` |
+| Reuse boundary | `ZERO-CODE-REUSE` |
+| Regression tests | `PASS - 11 passed, 0 failed` |
+| Atlas audit repository | `CLEAN - pinned baseline unchanged` |
+| Atlas source import | `NONE` |
+
+### GATE-2 evidence summary
+
+- Local Atlas runtime baseline was established under Node `v22.22.2`.
+- Google OAuth login, authenticated session and logout were verified.
+- Neon / Prisma database setup was verified.
+- Product upload and Vercel Blob direct media upload were verified.
+- Image generation reached Atlas but was blocked by the provider balance requirement.
+- Generation-history persistence was verified.
+- BYOK credit behaviour was runtime-tested; site-credit charge/refund logic was source-verified.
+- Atlas redeem and disabled checkout behaviour were verified.
+- Unconfigured Stripe webhook behaviour was verified.
+- Protected API routes rejected unauthenticated requests.
+- Public marketing-studio polling reached Atlas without an authenticated session; carry forward to `AUDIT-00C`.
+- Direct internal URL SSRF attempts through the download route were blocked; redirect-following remains for deeper security review.
+- Final regression suite passed 11/11.
+- Atlas source remained unchanged and no Atlas source was imported into RADAS V3.
+
 ## AUDIT-00A boundaries
 
 - Audit repository structure, licence evidence and dependencies only.
